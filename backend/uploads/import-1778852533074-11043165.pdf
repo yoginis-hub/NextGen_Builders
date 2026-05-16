@@ -1,0 +1,171 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 3217 >>
+stream
+BT
+/F1 18 Tf
+1 0 0 1 50 782 Tm
+(Ananya Patel) Tj
+/F1 12 Tf
+1 0 0 1 50 766 Tm
+(Data Scientist and ML Engineer) Tj
+/F1 8 Tf
+1 0 0 1 50 750 Tm
+() Tj
+/F1 10 Tf
+1 0 0 1 50 734 Tm
+(Email: ananya.patel@example.com) Tj
+/F1 10 Tf
+1 0 0 1 50 718 Tm
+(Phone: +91 87654 32109   Location: Hyderabad, India) Tj
+/F1 9 Tf
+1 0 0 1 50 702 Tm
+(LinkedIn: linkedin.com/in/ananyapatel) Tj
+/F1 8 Tf
+1 0 0 1 50 686 Tm
+() Tj
+/F1 9 Tf
+1 0 0 1 50 670 Tm
+(--------------------------------------------------) Tj
+/F1 11 Tf
+1 0 0 1 50 654 Tm
+(SUMMARY) Tj
+/F1 9 Tf
+1 0 0 1 50 638 Tm
+(--------------------------------------------------) Tj
+/F1 10 Tf
+1 0 0 1 50 622 Tm
+(Data Scientist with 5 years in machine learning, NLP, and data pipelines. Built fraud) Tj
+/F1 10 Tf
+1 0 0 1 50 606 Tm
+(detection models with 98.5 percent accuracy. Skilled in Python, TensorFlow, and AWS) Tj
+/F1 10 Tf
+1 0 0 1 50 590 Tm
+(SageMaker.) Tj
+/F1 8 Tf
+1 0 0 1 50 574 Tm
+() Tj
+/F1 9 Tf
+1 0 0 1 50 558 Tm
+(--------------------------------------------------) Tj
+/F1 11 Tf
+1 0 0 1 50 542 Tm
+(WORK EXPERIENCE) Tj
+/F1 9 Tf
+1 0 0 1 50 526 Tm
+(--------------------------------------------------) Tj
+/F1 11 Tf
+1 0 0 1 50 510 Tm
+(Senior Data Scientist | InsightAI Labs) Tj
+/F1 9 Tf
+1 0 0 1 50 494 Tm
+(2021 - 2024 \(3 years\)) Tj
+/F1 10 Tf
+1 0 0 1 50 478 Tm
+(  Fraud detection model using XGBoost and LSTM at 98.5 percent accuracy. NLP pipeline in 5) Tj
+/F1 10 Tf
+1 0 0 1 50 462 Tm
+(  languages. Deployed on AWS SageMaker for 10M predictions per day.) Tj
+/F1 8 Tf
+1 0 0 1 50 446 Tm
+() Tj
+/F1 11 Tf
+1 0 0 1 50 430 Tm
+(Data Scientist | RetailMind Analytics) Tj
+/F1 9 Tf
+1 0 0 1 50 414 Tm
+(2019 - 2021 \(2 years\)) Tj
+/F1 10 Tf
+1 0 0 1 50 398 Tm
+(  Product recommendation engine with collaborative filtering. Data pipelines with Apache) Tj
+/F1 10 Tf
+1 0 0 1 50 382 Tm
+(  Spark and Airflow. Dashboards in Tableau and Power BI.) Tj
+/F1 8 Tf
+1 0 0 1 50 366 Tm
+() Tj
+/F1 9 Tf
+1 0 0 1 50 350 Tm
+(--------------------------------------------------) Tj
+/F1 11 Tf
+1 0 0 1 50 334 Tm
+(TECHNICAL SKILLS) Tj
+/F1 9 Tf
+1 0 0 1 50 318 Tm
+(--------------------------------------------------) Tj
+/F1 10 Tf
+1 0 0 1 50 302 Tm
+(Languages: Python, R, SQL, Scala) Tj
+/F1 10 Tf
+1 0 0 1 50 286 Tm
+(ML and AI: TensorFlow, PyTorch, scikit-learn, XGBoost, Hugging Face) Tj
+/F1 10 Tf
+1 0 0 1 50 270 Tm
+(Data Engineering: Apache Spark, Airflow, Kafka, dbt) Tj
+/F1 10 Tf
+1 0 0 1 50 254 Tm
+(Cloud and Tools: AWS SageMaker, GCP Vertex AI, MLflow, Docker) Tj
+/F1 8 Tf
+1 0 0 1 50 238 Tm
+() Tj
+/F1 9 Tf
+1 0 0 1 50 222 Tm
+(--------------------------------------------------) Tj
+/F1 11 Tf
+1 0 0 1 50 206 Tm
+(EDUCATION) Tj
+/F1 9 Tf
+1 0 0 1 50 190 Tm
+(--------------------------------------------------) Tj
+/F1 10 Tf
+1 0 0 1 50 174 Tm
+(M.Tech Data Science | IIIT Hyderabad) Tj
+/F1 9 Tf
+1 0 0 1 50 158 Tm
+(Field: Data Science and AI   Year: 2019) Tj
+/F1 10 Tf
+1 0 0 1 50 142 Tm
+(B.Sc Mathematics | Pune University) Tj
+/F1 9 Tf
+1 0 0 1 50 126 Tm
+(Field: Mathematics   Year: 2017) Tj
+/F1 8 Tf
+1 0 0 1 50 110 Tm
+() Tj
+/F1 9 Tf
+1 0 0 1 50 94 Tm
+(--------------------------------------------------) Tj
+/F1 11 Tf
+1 0 0 1 50 78 Tm
+(CERTIFICATIONS) Tj
+/F1 9 Tf
+1 0 0 1 50 62 Tm
+(--------------------------------------------------) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000003510 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+3607
+%%EOF

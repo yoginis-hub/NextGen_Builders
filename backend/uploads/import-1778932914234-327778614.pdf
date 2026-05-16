@@ -1,0 +1,171 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 3210 >>
+stream
+BT
+/F1 18 Tf
+1 0 0 1 50 782 Tm
+(Rahul Gupta) Tj
+/F1 12 Tf
+1 0 0 1 50 766 Tm
+(Backend Engineer - Java and Microservices) Tj
+/F1 8 Tf
+1 0 0 1 50 750 Tm
+() Tj
+/F1 10 Tf
+1 0 0 1 50 734 Tm
+(Email: rahul.gupta@example.com) Tj
+/F1 10 Tf
+1 0 0 1 50 718 Tm
+(Phone: +91 91234 56789   Location: Bangalore, India) Tj
+/F1 9 Tf
+1 0 0 1 50 702 Tm
+(LinkedIn: linkedin.com/in/rahulgupta) Tj
+/F1 8 Tf
+1 0 0 1 50 686 Tm
+() Tj
+/F1 9 Tf
+1 0 0 1 50 670 Tm
+(--------------------------------------------------) Tj
+/F1 11 Tf
+1 0 0 1 50 654 Tm
+(SUMMARY) Tj
+/F1 9 Tf
+1 0 0 1 50 638 Tm
+(--------------------------------------------------) Tj
+/F1 10 Tf
+1 0 0 1 50 622 Tm
+(Backend Engineer with 8 years in Java, Spring Boot, and microservices. Designed payment) Tj
+/F1 10 Tf
+1 0 0 1 50 606 Tm
+(systems handling 2 million daily transactions. Strong in Kafka, Docker, Kubernetes, and) Tj
+/F1 10 Tf
+1 0 0 1 50 590 Tm
+(AWS.) Tj
+/F1 8 Tf
+1 0 0 1 50 574 Tm
+() Tj
+/F1 9 Tf
+1 0 0 1 50 558 Tm
+(--------------------------------------------------) Tj
+/F1 11 Tf
+1 0 0 1 50 542 Tm
+(WORK EXPERIENCE) Tj
+/F1 9 Tf
+1 0 0 1 50 526 Tm
+(--------------------------------------------------) Tj
+/F1 11 Tf
+1 0 0 1 50 510 Tm
+(Lead Backend Engineer | PayFast India) Tj
+/F1 9 Tf
+1 0 0 1 50 494 Tm
+(2020 - 2024 \(4 years\)) Tj
+/F1 10 Tf
+1 0 0 1 50 478 Tm
+(  Built payment microservices for 2M daily transactions. Event-driven architecture with) Tj
+/F1 10 Tf
+1 0 0 1 50 462 Tm
+(  Kafka. Optimised PostgreSQL reducing latency from 800ms to 120ms.) Tj
+/F1 8 Tf
+1 0 0 1 50 446 Tm
+() Tj
+/F1 11 Tf
+1 0 0 1 50 430 Tm
+(Backend Developer | ShopEase Technologies) Tj
+/F1 9 Tf
+1 0 0 1 50 414 Tm
+(2016 - 2020 \(4 years\)) Tj
+/F1 10 Tf
+1 0 0 1 50 398 Tm
+(  REST APIs with Spring Boot for 500K daily users. Containerised services on Docker.) Tj
+/F1 10 Tf
+1 0 0 1 50 382 Tm
+(  Deployed on AWS ECS.) Tj
+/F1 8 Tf
+1 0 0 1 50 366 Tm
+() Tj
+/F1 9 Tf
+1 0 0 1 50 350 Tm
+(--------------------------------------------------) Tj
+/F1 11 Tf
+1 0 0 1 50 334 Tm
+(TECHNICAL SKILLS) Tj
+/F1 9 Tf
+1 0 0 1 50 318 Tm
+(--------------------------------------------------) Tj
+/F1 10 Tf
+1 0 0 1 50 302 Tm
+(Languages: Java, Kotlin, SQL, Python) Tj
+/F1 10 Tf
+1 0 0 1 50 286 Tm
+(Frameworks: Spring Boot, Spring Cloud, Hibernate, gRPC) Tj
+/F1 10 Tf
+1 0 0 1 50 270 Tm
+(Databases: PostgreSQL, MySQL, Redis, MongoDB) Tj
+/F1 10 Tf
+1 0 0 1 50 254 Tm
+(Cloud and DevOps: Docker, Kubernetes, AWS, Apache Kafka) Tj
+/F1 8 Tf
+1 0 0 1 50 238 Tm
+() Tj
+/F1 9 Tf
+1 0 0 1 50 222 Tm
+(--------------------------------------------------) Tj
+/F1 11 Tf
+1 0 0 1 50 206 Tm
+(EDUCATION) Tj
+/F1 9 Tf
+1 0 0 1 50 190 Tm
+(--------------------------------------------------) Tj
+/F1 10 Tf
+1 0 0 1 50 174 Tm
+(B.Tech Computer Science | IIT Roorkee) Tj
+/F1 9 Tf
+1 0 0 1 50 158 Tm
+(Field: Computer Science   Year: 2016) Tj
+/F1 8 Tf
+1 0 0 1 50 142 Tm
+() Tj
+/F1 9 Tf
+1 0 0 1 50 126 Tm
+(--------------------------------------------------) Tj
+/F1 11 Tf
+1 0 0 1 50 110 Tm
+(CERTIFICATIONS) Tj
+/F1 9 Tf
+1 0 0 1 50 94 Tm
+(--------------------------------------------------) Tj
+/F1 10 Tf
+1 0 0 1 50 78 Tm
+(- AWS Certified Solutions Architect Associate \(AWS, 2022\)) Tj
+/F1 10 Tf
+1 0 0 1 50 62 Tm
+(- Spring Professional Certification \(VMware, 2021\)) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000003503 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+3600
+%%EOF
