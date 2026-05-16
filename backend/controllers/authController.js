@@ -29,6 +29,27 @@ const sendTokenResponse = (user, statusCode, res) => {
   });
 };
 
+exports.createHR = asyncHandler(async (req, res) => {
+  const { name, email, password } = req.body;
+
+  if (!name || !email || !password) {
+    return res.status(400).json({ success: false, message: 'Please provide name, email, and password' });
+  }
+
+  const existing = await User.findOne({ email });
+  if (existing) {
+    return res.status(400).json({ success: false, message: 'Email already registered' });
+  }
+
+  const user = await User.create({ name, email, password, role: 'hr' });
+
+  res.status(201).json({
+    success: true,
+    message: 'HR account created successfully',
+    user: { id: user._id, name: user.name, email: user.email, role: user.role }
+  });
+});
+
 exports.register = asyncHandler(async (req, res) => {
   const { name, email, password, role } = req.body;
 
@@ -71,11 +92,6 @@ exports.login = asyncHandler(async (req, res) => {
   const isMatch = await user.comparePassword(password);
   if (!isMatch) {
     return res.status(401).json({ success: false, message: 'Invalid credentials' });
-  }
-
-  // Once a company email is set, only allow login via company email
-  if (user.companyEmail && email.toLowerCase() !== user.companyEmail) {
-    return res.status(401).json({ success: false, message: `Please log in with your company email: ${user.companyEmail}` });
   }
 
   user.lastLogin = new Date();

@@ -1,5 +1,6 @@
 import { Outlet } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import { Play } from 'lucide-react'
 import ThemeToggle from '../components/ui/ThemeToggle'
 import AppIcon from '../components/ui/AppIcon'
 
@@ -101,13 +102,37 @@ export default function AuthLayout() {
 
           {/* Floating skill tags */}
           <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.9 }}
-            className="flex flex-wrap justify-center gap-2 max-w-xs">
+            className="flex flex-wrap justify-center gap-2 max-w-xs mb-8">
             {TAGS.map((tag, i) => (
               <motion.span key={tag} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1 + i * 0.07 }}
                 className="text-xs font-semibold px-2.5 py-1 rounded-lg bg-white/10 text-white/70 border border-white/15 backdrop-blur-sm">
                 {tag}
               </motion.span>
             ))}
+          </motion.div>
+
+          {/* Watch Demo button */}
+          <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.2 }}>
+            <a
+              href="/login#demo"
+              onClick={e => {
+                e.preventDefault()
+                document.getElementById('watch-demo-btn')?.click()
+              }}
+              className="inline-flex items-center gap-3 px-5 py-3 rounded-2xl bg-white/10 hover:bg-white/20 border border-white/20 hover:border-white/40 backdrop-blur-sm transition-all group cursor-pointer"
+            >
+              <motion.div
+                animate={{ scale: [1, 1.15, 1] }}
+                transition={{ duration: 2, repeat: Infinity }}
+                className="w-9 h-9 rounded-full bg-white flex items-center justify-center shadow-lg shadow-black/20 flex-shrink-0"
+              >
+                <Play size={14} className="text-primary-600 ml-0.5" fill="currentColor" />
+              </motion.div>
+              <div className="text-left">
+                <p className="text-sm font-bold text-white leading-tight group-hover:text-yellow-300 transition-colors">Explore Features</p>
+                <p className="text-xs text-white/55">Interactive tour of the platform</p>
+              </div>
+            </a>
           </motion.div>
 
         </div>

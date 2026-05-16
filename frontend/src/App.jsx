@@ -12,6 +12,7 @@ import ReviewQueue from './pages/ReviewQueue'
 import TeamBuilder from './pages/TeamBuilder'
 import ImportEmployees from './pages/ImportEmployees'
 import Profile from './pages/Profile'
+import ManageHR from './pages/ManageHR'
 import SetupCompanyEmail from './pages/SetupCompanyEmail'
 import LoadingScreen from './components/ui/LoadingScreen'
 
@@ -60,6 +61,9 @@ export default function App() {
         } />
         <Route path="/hr/directory" element={
           <ProtectedRoute allowedRoles={['hr']}><EmployeeDirectory /></ProtectedRoute>
+        } />
+        <Route path="/hr/manage-hr" element={
+          <ProtectedRoute allowedRoles={['hr']}><ManageHR /></ProtectedRoute>
         } />
 
         {/* Employee Routes */}

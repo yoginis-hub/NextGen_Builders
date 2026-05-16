@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Navigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { Mail, ArrowRight, CheckCircle2, Building2 } from 'lucide-react'
 import toast from 'react-hot-toast'
@@ -15,11 +15,10 @@ export default function SetupCompanyEmail() {
   const [loading, setLoading] = useState(false)
   const [done, setDone] = useState(false)
 
-  // Already set — redirect
-  if (!needsCompanyEmail) {
-    navigate('/employee/dashboard', { replace: true })
-    return null
-  }
+  const dashboard = user?.role === 'hr' ? '/hr/dashboard' : '/employee/dashboard'
+
+  // Already set — redirect directly to dashboard
+  if (!needsCompanyEmail) return <Navigate to={dashboard} replace />
 
   const companyEmail = username.trim().toLowerCase() + DOMAIN
 
@@ -36,7 +35,7 @@ export default function SetupCompanyEmail() {
       updateUser({ companyEmail })
       setDone(true)
       toast.success('Company email set successfully!')
-      setTimeout(() => navigate('/employee/dashboard', { replace: true }), 1800)
+      setTimeout(() => navigate(dashboard, { replace: true }), 1800)
     } catch (err) {
       toast.error(err.response?.data?.message || err.message || 'Failed to set company email')
     } finally {
@@ -59,7 +58,7 @@ export default function SetupCompanyEmail() {
         <h2 className="text-3xl font-black text-gray-900 dark:text-white mb-2">Almost there!</h2>
         <p className="text-gray-500 dark:text-gray-400 leading-relaxed">
           You signed in with <span className="font-semibold text-gray-700 dark:text-gray-200">{user?.email}</span>
-          <br />Please set your <span className="font-semibold text-primary-500">company email</span> to continue.
+          <br />Please set your <span className="font-semibold text-primary-500">company email</span> to access your {user?.role === 'hr' ? 'HR dashboard' : 'profile'}.
         </p>
       </div>
 
@@ -72,7 +71,7 @@ export default function SetupCompanyEmail() {
           <CheckCircle2 size={48} className="mx-auto mb-4 text-green-500" />
           <p className="text-lg font-bold text-gray-900 dark:text-white">Company email set!</p>
           <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">{companyEmail}</p>
-          <p className="text-xs text-gray-400 mt-3">Redirecting to dashboard...</p>
+          <p className="text-xs text-gray-400 mt-3">Redirecting to your {user?.role === 'hr' ? 'HR dashboard' : 'dashboard'}...</p>
         </motion.div>
       ) : (
         <form onSubmit={handleSubmit} className="space-y-5">

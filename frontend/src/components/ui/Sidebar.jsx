@@ -2,7 +2,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { NavLink, Link } from 'react-router-dom'
 import {
   LayoutDashboard, Search, Users, ClipboardCheck, Layers,
-  Upload, User, Sparkles, ChevronRight, X, FileSpreadsheet
+  Upload, User, Sparkles, ChevronRight, X, FileSpreadsheet, UserPlus
 } from 'lucide-react'
 import AppIcon from './AppIcon'
 import { useAuth } from '../../context/AuthContext'
@@ -14,6 +14,7 @@ const hrLinks = [
   { to: '/hr/reviews', icon: ClipboardCheck, label: 'Review Queue' },
   { to: '/hr/team-builder', icon: Layers, label: 'Team Builder' },
   { to: '/hr/import', icon: FileSpreadsheet, label: 'Bulk Import' },
+  { to: '/hr/manage-hr', icon: UserPlus, label: 'Manage HR' },
 ]
 
 const employeeLinks = [

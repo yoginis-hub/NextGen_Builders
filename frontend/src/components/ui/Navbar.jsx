@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { Search, ChevronDown, LogOut, User, Settings } from 'lucide-react'
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../../context/AuthContext'
 import AppIcon from './AppIcon'
@@ -11,6 +11,18 @@ export default function Navbar({ onMobileMenuToggle }) {
   const { user, logout } = useAuth()
   const navigate = useNavigate()
   const [dropdownOpen, setDropdownOpen] = useState(false)
+  const dropdownRef = useRef(null)
+
+  useEffect(() => {
+    if (!dropdownOpen) return
+    const handler = (e) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setDropdownOpen(false)
+      }
+    }
+    document.addEventListener('mousedown', handler)
+    return () => document.removeEventListener('mousedown', handler)
+  }, [dropdownOpen])
 
   const handleLogout = () => {
     logout()
@@ -52,7 +64,7 @@ export default function Navbar({ onMobileMenuToggle }) {
           <ThemeToggle />
 
           {/* User dropdown */}
-          <div className="relative">
+          <div className="relative" ref={dropdownRef}>
             <button
               onClick={() => setDropdownOpen(!dropdownOpen)}
               className="flex items-center gap-2 pl-1 pr-3 py-1 rounded-xl hover:bg-gray-100 dark:hover:bg-dark-700 transition-colors"
@@ -68,32 +80,29 @@ export default function Navbar({ onMobileMenuToggle }) {
             </button>
 
             {dropdownOpen && (
-              <>
-                <div className="fixed inset-0 z-10" onClick={() => setDropdownOpen(false)} />
-                <motion.div
-                  initial={{ opacity: 0, y: 5, scale: 0.97 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  className="absolute right-0 top-full mt-2 w-56 glass-card py-2 z-20"
+              <motion.div
+                initial={{ opacity: 0, y: 5, scale: 0.97 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                className="absolute right-0 top-full mt-2 w-56 glass-card py-2 z-20"
+              >
+                <div className="px-4 py-2 border-b border-gray-100 dark:border-dark-700">
+                  <p className="text-sm font-semibold text-gray-900 dark:text-white">{user?.name}</p>
+                  <p className="text-xs text-gray-500 dark:text-gray-400">{user?.email}</p>
+                </div>
+                <Link
+                  to="/profile"
+                  onClick={() => setDropdownOpen(false)}
+                  className="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-dark-700 transition-colors"
                 >
-                  <div className="px-4 py-2 border-b border-gray-100 dark:border-dark-700">
-                    <p className="text-sm font-semibold text-gray-900 dark:text-white">{user?.name}</p>
-                    <p className="text-xs text-gray-500 dark:text-gray-400">{user?.email}</p>
-                  </div>
-                  <Link
-                    to="/profile"
-                    onClick={() => setDropdownOpen(false)}
-                    className="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-dark-700 transition-colors"
-                  >
-                    <User size={16} /> My Profile
-                  </Link>
-                  <button
-                    onClick={handleLogout}
-                    className="w-full flex items-center gap-3 px-4 py-2.5 text-sm text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 transition-colors"
-                  >
-                    <LogOut size={16} /> Sign Out
-                  </button>
-                </motion.div>
-              </>
+                  <User size={16} /> My Profile
+                </Link>
+                <button
+                  onClick={handleLogout}
+                  className="w-full flex items-center gap-3 px-4 py-2.5 text-sm text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 transition-colors"
+                >
+                  <LogOut size={16} /> Sign Out
+                </button>
+              </motion.div>
             )}
           </div>
         </div>

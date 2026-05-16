@@ -105,7 +105,7 @@ exports.updateEmployee = asyncHandler(async (req, res) => {
 
   const allowedFields = req.user.role === 'hr'
     ? ['name', 'role', 'location', 'phone', 'summary', 'skills', 'projects', 'certifications', 'previousCompanies', 'education', 'availability', 'availableFrom', 'linkedIn', 'github', 'portfolio', 'avatar']
-    : ['phone', 'location', 'summary', 'availability', 'availableFrom', 'linkedIn', 'github', 'portfolio', 'avatar'];
+    : ['phone', 'location', 'summary', 'skills', 'availability', 'availableFrom', 'linkedIn', 'github', 'portfolio', 'avatar'];
 
   const updates = {};
   allowedFields.forEach(field => {

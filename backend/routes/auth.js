@@ -3,8 +3,8 @@ const router = express.Router();
 const multer = require('multer');
 const path = require('path');
 const fs = require('fs');
-const { register, login, getMe, updateProfile, uploadAvatar, setCompanyEmail } = require('../controllers/authController');
-const { protect } = require('../middleware/auth');
+const { register, login, getMe, updateProfile, uploadAvatar, setCompanyEmail, createHR } = require('../controllers/authController');
+const { protect, authorize } = require('../middleware/auth');
 
 const avatarDir = path.join(__dirname, '../uploads/avatars');
 if (!fs.existsSync(avatarDir)) fs.mkdirSync(avatarDir, { recursive: true });
@@ -27,5 +27,6 @@ router.get('/me', protect, getMe);
 router.put('/profile', protect, updateProfile);
 router.post('/avatar', protect, avatarUpload.single('avatar'), uploadAvatar);
 router.patch('/company-email', protect, setCompanyEmail);
+router.post('/create-hr', protect, authorize('hr'), createHR);
 
 module.exports = router;

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { User, Mail, Lock, Eye, EyeOff, ArrowRight, Briefcase } from 'lucide-react'
+import { User, Mail, Lock, Eye, EyeOff, ArrowRight } from 'lucide-react'
 import toast from 'react-hot-toast'
 import AppIcon from '../components/ui/AppIcon'
 import { useAuth } from '../context/AuthContext'
@@ -103,31 +103,6 @@ export default function Register() {
             >
               {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
             </button>
-          </div>
-        </div>
-
-        <div>
-          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">I am a...</label>
-          <div className="grid grid-cols-2 gap-3">
-            {[
-              { value: 'employee', label: 'Employee', icon: User, desc: 'Upload resume, view profile' },
-              { value: 'hr', label: 'HR Manager', icon: Briefcase, desc: 'Manage team, AI search' }
-            ].map(({ value, label, icon: Icon, desc }) => (
-              <button
-                key={value}
-                type="button"
-                onClick={() => setForm(p => ({ ...p, role: value }))}
-                className={`p-4 rounded-xl border-2 text-left transition-all ${
-                  form.role === value
-                    ? 'border-primary-500 bg-primary-50 dark:bg-primary-900/20'
-                    : 'border-gray-200 dark:border-dark-600 hover:border-gray-300 dark:hover:border-dark-500'
-                }`}
-              >
-                <Icon size={20} className={form.role === value ? 'text-primary-500 mb-2' : 'text-gray-400 mb-2'} />
-                <p className={`text-sm font-semibold ${form.role === value ? 'text-primary-600 dark:text-primary-400' : 'text-gray-700 dark:text-gray-300'}`}>{label}</p>
-                <p className="text-xs text-gray-400 mt-0.5">{desc}</p>
-              </button>
-            ))}
           </div>
         </div>
 

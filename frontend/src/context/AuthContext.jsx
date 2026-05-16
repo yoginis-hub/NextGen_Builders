@@ -71,7 +71,8 @@ export const AuthProvider = ({ children }) => {
     return merged
   })
 
-  const needsCompanyEmail = user?.role === 'employee' && !user?.companyEmail
+  const hasCompanyEmail = !!user?.companyEmail || user?.email?.endsWith('@skillsync.ai')
+  const needsCompanyEmail = !!user && !hasCompanyEmail
 
   return (
     <AuthContext.Provider value={{ user, loading, token, login, register, logout, updateUser, isHR: user?.role === 'hr', isEmployee: user?.role === 'employee', needsCompanyEmail }}>
